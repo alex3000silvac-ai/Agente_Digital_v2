@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "taxonomias": [
+    {
+      "Id_Taxonomia": "INC_USO_PHIP_ECDP",
+      "nombre": "Actividades de phishing o fraude en infraestructura propia",
+      "Descripcion": "Uso de los servidores de la institución para generar correos fraudulentos o spam.",
+      "AplicaTipoEmpresa": "AMBAS",
+      "Comentarios": "Justificación: asdfsadf sdf sadf s sdf sadf sdf\nDescripción del problema: dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+      "FechaAsignacion": "2025-07-19T22:40:45.620000",
+      "CreadoPor": "Sistema",
+      "categoria": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "justificacion": "asdfsadf sdf sadf s sdf sadf sdf",
+      "descripcionProblema": "dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+      "id": "INC_USO_PHIP_ECDP",
+      "archivos": [
+        {
+          "id": 1,
+          "nombre": "20250719_230633_evidencia_INC_USO_PHIP_ECDP.pdf",
+          "nombreOriginal": "evidencia_Actividades_de_phishing_o_fraude_en_infraestructura_propia.pdf",
+          "ruta": "/uploads/incidentes/25/taxonomias/20250719_230633_evidencia_INC_USO_PHIP_ECDP.pdf",
+          "tamaño": 51200,
+          "fechaSubida": "2025-07-19T23:06:33.276666"
+        }
+      ]
+    }
+  ],
+  "total": 1
+}

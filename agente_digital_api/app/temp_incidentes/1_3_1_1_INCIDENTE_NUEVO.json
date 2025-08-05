@@ -1,0 +1,108 @@
+{
+  "inquilino_id": 1,
+  "empresa_id": "3",
+  "titulo_incidente": "Corta textos según límites de la BD",
+  "fecha_deteccion": "2025-07-17T23:47",
+  "fecha_ocurrencia": "2025-07-17T23:47",
+  "criticidad": "Alta",
+  "alcance_geografico": "Pais",
+  "descripcion_detallada": "Corta textos según límites de la BD Corta t Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BDextos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "impacto_preliminar": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "sistemas_afectados": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "servicios_interrumpidos": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "origen_ataque": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "tipo_amenaza": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "responsable_cliente": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "medidas_contencion": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "analisis_causa_raiz": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "lecciones_aprendidas": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD",
+  "recomendaciones_mejora": "Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD Corta textos según límites de la BD %%%%%%%%%",
+  "usuario_id": 1,
+  "taxonomias": [
+    {
+      "id": "INC_USO_PHIP_ECDP",
+      "nombre": "Envío de correo no deseado o phishing desde infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "area": "Impacto en el uso legítimo de recursos",
+      "efecto": "Actividades de phishing o fraude en infraestructura propia",
+      "categoria": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "subcategoria": "Actividades de phishing o fraude en infraestructura propia",
+      "descripcion": "Impacto en el uso legítimo de recursos - Actividades de phishing o fraude en infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "tipo": "AMBAS",
+      "justificacion": " Corta textos según límites de la BD",
+      "descripcionProblema": " Corta textos según límites de la BD",
+      "archivos": [
+        {
+          "id": 1752810523056.1807,
+          "nombre": "ejemplo.docx",
+          "tamaño": 122320,
+          "tipo": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "archivo": {},
+          "fechaCarga": "2025-07-18T03:48:43.056Z"
+        }
+      ],
+      "guardada": true,
+      "fechaGuardado": "2025-07-18T03:48:46.171Z"
+    }
+  ],
+  "archivos": {
+    "seccion_2": [
+      {
+        "nombre": "tabla_taxonomia.txt",
+        "tamaño": 9756,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T03:48:08.466Z",
+        "descripcion": " Corta textos según límites de la BD",
+        "comentario": " Corta textos según límites de la BD",
+        "file": {},
+        "seccion": 2,
+        "campo": 5,
+        "id": "2.5.1752810488466"
+      }
+    ],
+    "seccion_3": [
+      {
+        "nombre": "formato_base.txt",
+        "tamaño": 46722,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T03:48:26.333Z",
+        "descripcion": " Corta textos según límites de la BD",
+        "comentario": " Corta textos según límites de la BD",
+        "file": {},
+        "seccion": 3,
+        "campo": 4,
+        "id": "3.4.1752810506333"
+      }
+    ],
+    "seccion_5": [
+      {
+        "nombre": "listado_archivos.txt",
+        "tamaño": 5404040,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T03:48:56.801Z",
+        "descripcion": " Corta textos según límites de la BD",
+        "comentario": " Corta textos según límites de la BD",
+        "file": {},
+        "seccion": 5,
+        "campo": 2,
+        "id": "5.2.1752810536801"
+      }
+    ],
+    "seccion_6": [
+      {
+        "nombre": "listado_archivos.txt",
+        "tamaño": 5404040,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T03:49:23.453Z",
+        "descripcion": " Corta textos según límites de la BD",
+        "comentario": " Corta textos según límites de la BD",
+        "file": {},
+        "seccion": 6,
+        "campo": 4,
+        "id": "6.4.1752810563453"
+      }
+    ]
+  },
+  "timestamp_creacion": "2025-07-17T23:49:36.797821",
+  "estado_temporal": "semilla_original",
+  "indice_unico": "1_3_1_1_INCIDENTE_NUEVO"
+}

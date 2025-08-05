@@ -1,0 +1,23 @@
+# BACKUP - acompanamiento.py query obligaciones
+# Fecha: 2025-07-11
+# Query original que incluía columnas inexistentes:
+
+            query_obligaciones = """
+                SELECT DISTINCT
+                    O.ObligacionID,
+                    O.ArticuloNorma,
+                    O.Descripcion,
+                    O.MedioDeVerificacionSugerido,
+                    O.AplicaPara,
+                    ISNULL(CE.Estado, 'Pendiente') as Estado,
+                    ISNULL(CE.PorcentajeAvance, 0) as PorcentajeAvance,
+                    CE.Responsable,
+                    CE.FechaTermino,
+                    CE.Observaciones,
+                    CE.ArchivoEvidencia,
+                    CE.RutaEvidencia
+                FROM OBLIGACIONES O
+                LEFT JOIN CumplimientoEmpresa CE ON O.ObligacionID = CE.ObligacionID AND CE.EmpresaID = ?
+                WHERE (O.AplicaPara = ? OR O.AplicaPara = 'Ambos')
+                ORDER BY O.ArticuloNorma
+            """

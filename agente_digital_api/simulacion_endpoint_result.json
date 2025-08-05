@@ -1,0 +1,47 @@
+{
+  "incidente_id": 5,
+  "taxonomias_seleccionadas": [
+    {
+      "id": "INC_CONF_EXCF_FCRA",
+      "nombre": "Filtración de configuraciones en rutas de aplicación - Exfiltración y/o exposición de configuraciones",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de configuraciones",
+      "categoria": "Filtración de configuraciones en rutas de aplicación",
+      "subcategoria": "Exfiltración y/o exposición de configuraciones",
+      "tipo": "AMBAS",
+      "descripcion": "Exposición de ficheros de configuración a través de rutas accesibles.",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de configuraciones en el área de Impacto en la confidencialidad de la información. Exposición de ficheros de configuración a través de rutas accesibles.",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18T14:15:35.466666",
+      "archivos": []
+    },
+    {
+      "id": "INC_CONF_EXCF_FSRA",
+      "nombre": "Filtración de secretos en rutas de aplicación - Exfiltración y/o exposición de configuraciones",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de configuraciones",
+      "categoria": "Filtración de secretos en rutas de aplicación",
+      "subcategoria": "Exfiltración y/o exposición de configuraciones",
+      "tipo": "AMBAS",
+      "descripcion": "Exposición de credenciales, tokens o contraseñas en rutas accesibles de una aplicación.",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de configuraciones en el área de Impacto en la confidencialidad de la información. Exposición de credenciales, tokens o contraseñas en rutas accesibles de una aplicación.",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18T14:15:35.473333",
+      "archivos": []
+    },
+    {
+      "id": "INC_CONF_EXCS_ACVE",
+      "nombre": "Archivo(s) de control de versión expuestos en aplicación - Exfiltración y/o exposición de código fuente",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de código fuente",
+      "categoria": "Archivo(s) de control de versión expuestos en aplicación",
+      "subcategoria": "Exfiltración y/o exposición de código fuente",
+      "tipo": "AMBAS",
+      "descripcion": "Exposición de directorios o archivos de sistemas de control de versiones (ej: .git).",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de código fuente en el área de Impacto en la confidencialidad de la información. Exposición de directorios o archivos de sistemas de control de versiones (ej: .git).",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18T14:15:35.480000",
+      "archivos": []
+    }
+  ]
+}

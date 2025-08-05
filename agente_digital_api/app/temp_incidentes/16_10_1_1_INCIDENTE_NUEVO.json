@@ -1,0 +1,128 @@
+{
+  "inquilino_id": 1,
+  "empresa_id": "10",
+  "titulo_incidente": "dashboard si no hay empresa",
+  "fecha_deteccion": "2025-07-19T22:38",
+  "fecha_ocurrencia": "2025-07-19T22:38",
+  "criticidad": "Alta",
+  "alcance_geografico": "Local",
+  "descripcion_detallada": "sdsfsadfsadf",
+  "impacto_preliminar": "sdfsdf",
+  "sistemas_afectados": "sdfsdf",
+  "servicios_interrumpidos": "sadfsdfsdfsdf",
+  "origen_ataque": "sdfsdf dfasdf sdfsf",
+  "tipo_amenaza": "sdfsadf dsfsdaf asdfsdf",
+  "responsable_cliente": "sdfsdf sdfsadf sdfsf",
+  "medidas_contencion": "sdfasfsfd dfsfsdf",
+  "analisis_causa_raiz": "sdfasdf sdfsd f",
+  "lecciones_aprendidas": "asdfasf dsfsadfsf sa sssssssssssss",
+  "recomendaciones_mejora": "sdfsdfsafsds",
+  "usuario_id": 1,
+  "taxonomias": [
+    {
+      "id": "INC_USO_PHIP_ECDP",
+      "nombre": "Envío de correo no deseado o phishing desde infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "area": "Impacto en el uso legítimo de recursos",
+      "efecto": "Actividades de phishing o fraude en infraestructura propia",
+      "categoria": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "subcategoria": "Actividades de phishing o fraude en infraestructura propia",
+      "descripcion": "Impacto en el uso legítimo de recursos - Actividades de phishing o fraude en infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "tipo": "AMBAS",
+      "justificacion": "asdfsadf sdf sadf s sdf sadf sdf",
+      "descripcionProblema": "dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+      "archivos": [
+        {
+          "id": 1752979199771.967,
+          "nombre": "archivo_existente_3_0 (1).txt",
+          "tamaño": 152,
+          "tipo": "text/plain",
+          "file": {},
+          "fechaCarga": "2025-07-20T02:39:59.771Z",
+          "existente": false
+        }
+      ],
+      "datosOriginales": {
+        "justificacion": "asdfsadf sdf sadf s sdf sadf sdf",
+        "descripcionProblema": "dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+        "archivos": [
+          {
+            "id": 1752979199771.967,
+            "nombre": "archivo_existente_3_0 (1).txt",
+            "tamaño": 152,
+            "tipo": "text/plain",
+            "file": {},
+            "fechaCarga": "2025-07-20T02:39:59.771Z",
+            "existente": false
+          }
+        ]
+      },
+      "guardada": true,
+      "fechaGuardado": "2025-07-20T02:40:01.758Z"
+    }
+  ],
+  "archivos": {
+    "seccion_2": [
+      {
+        "nombre": "archivo_existente_6_0.txt",
+        "tamaño": 152,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-20T02:39:04.360Z",
+        "descripcion": "ddddfdfd",
+        "comentario": "ssdfsdaf dfdsaf",
+        "file": {},
+        "seccion": 2,
+        "campo": 5,
+        "id": "2.5.1752979144361",
+        "existente": false
+      }
+    ],
+    "seccion_3": [
+      {
+        "nombre": "ANCI_Sanciones_Fiscalizacion_Chile.txt",
+        "tamaño": 46199,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-20T02:39:26.297Z",
+        "descripcion": "sdfdddd",
+        "comentario": "ssd fdfdfdf dfd",
+        "file": {},
+        "seccion": 3,
+        "campo": 4,
+        "id": "3.4.1752979166298",
+        "existente": false
+      }
+    ],
+    "seccion_5": [
+      {
+        "nombre": "CAE_ Negociación vs. Defensa Judicial_.docx",
+        "tamaño": 6214191,
+        "tipo": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "fechaCarga": "2025-07-20T02:40:16.324Z",
+        "descripcion": "sdfsf ",
+        "comentario": "sdfdf  dfdf",
+        "file": {},
+        "seccion": 5,
+        "campo": 2,
+        "id": "5.2.1752979216324",
+        "existente": false
+      }
+    ],
+    "seccion_6": [
+      {
+        "nombre": "archivo_existente_5_0.txt",
+        "tamaño": 152,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-20T02:40:33.805Z",
+        "descripcion": "sdfssfsfd ",
+        "comentario": "sdfsdfsdfsf ",
+        "file": {},
+        "seccion": 6,
+        "campo": 4,
+        "id": "6.4.1752979233805",
+        "existente": false
+      }
+    ]
+  },
+  "timestamp_creacion": "2025-07-19T22:40:45.584016",
+  "estado_temporal": "semilla_original",
+  "indice_unico": "16_10_1_1_INCIDENTE_NUEVO"
+}

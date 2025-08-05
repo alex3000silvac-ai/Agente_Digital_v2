@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencia de Acciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #1a202c;
+        }
+    </style>
+</head>
+<body class="text-gray-300 font-sans p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        
+        <!-- Contenedor principal -->
+        <div class="bg-[#2d3748] p-6 rounded-lg shadow-lg border border-gray-600">
+            
+            <h2 class="text-xl font-semibold mb-6 border-b border-gray-600 pb-3">5. Acciones Inmediatas (Requerido para OIV/PSE)</h2>
+
+            <!-- Medidas de Contención Iniciales -->
+            <div class="mb-6">
+                <label for="medidas" class="block text-sm font-medium text-gray-400 mb-2">Medidas de Contención Iniciales *</label>
+                <textarea id="medidas" rows="4" class="w-full bg-[#1a202c] border border-gray-500 rounded-md p-3 text-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Describa las medidas de contención iniciales implementadas..."></textarea>
+            </div>
+
+            <!-- Evidencia de Acciones -->
+            <div class="mb-4">
+                <label for="evidencia" class="block text-sm font-medium text-gray-400 mb-2">Evidencia de Acciones</label>
+                <div class="flex items-center">
+                    <label for="file-upload" class="cursor-pointer bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-md transition duration-200">
+                        Elegir archivos
+                    </label>
+                    <input id="file-upload" name="file-upload" type="file" class="sr-only" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif,.xlsx,.csv,.zip">
+                    <span id="file-count" class="ml-4 text-gray-400">Ningún archivo seleccionado</span>
+                </div>
+            </div>
+
+            <!-- Botón de Gestionar Archivos -->
+            <div class="mb-6">
+                <button id="manage-files" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition duration-200 flex items-center">
+                    <i class="fas fa-folder-open mr-2"></i>
+                    Gestionar Archivos y Versiones
+                </button>
+            </div>
+
+            <!-- Tabla de archivos -->
+            <div class="mt-8 border-t border-gray-600 pt-6">
+                <h3 class="text-lg font-semibold mb-4">Archivos de Evidencia Cargados</h3>
+                <div class="overflow-x-auto bg-[#1a202c] rounded-lg p-4">
+                    <table id="files-table" class="min-w-full divide-y divide-gray-700">
+                        <thead class="bg-[#2d3748]">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Nombre Archivo</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Descripción</th>
+                                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-300 uppercase tracking-wider">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="files-tbody" class="bg-[#2d3748] divide-y divide-gray-700">
+                            <!-- Filas dinámicas -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Botón para agregar nuevo archivo -->
+                <div class="mt-6">
+                    <button id="add-file" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md transition duration-200 flex items-center">
+                        <i class="fas fa-plus mr-2"></i>
+                        Agregar Archivo de Evidencia
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Variables globales
+        let uploadedFiles = [];
+        let fileCounter = 0;
+
+        // Referencias a elementos
+        const fileInput = document.getElementById('file-upload');
+        const fileCount = document.getElementById('file-count');
+        const filesTable = document.getElementById('files-table');
+        const filesTbody = document.getElementById('files-tbody');
+        const addFileBtn = document.getElementById('add-file');
+        const manageFilesBtn = document.getElementById('manage-files');
+
+        // Evento para selección de archivos
+        fileInput.addEventListener('change', handleFileSelect);
+        addFileBtn.addEventListener('click', () => fileInput.click());
+
+        function handleFileSelect(event) {
+            const files = Array.from(event.target.files);
+            
+            if (files.length === 0) {
+                fileCount.textContent = 'Ningún archivo seleccionado';
+                return;
+            }
+
+            // Actualizar contador
+            fileCount.textContent = `${files.length} archivo(s) seleccionado(s)`;
+
+            // Procesar archivos
+            files.forEach(file => {
+                if (validateFile(file)) {
+                    uploadFile(file);
+                }
+            });
+
+            // Limpiar input
+            fileInput.value = '';
+        }
+
+        function validateFile(file) {
+            const maxSize = 100 * 1024 * 1024; // 100MB
+            const allowedTypes = [
+                'application/pdf',
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'text/plain',
+                'image/jpeg',
+                'image/png',
+                'image/gif',
+                'application/vnd.ms-excel',
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'text/csv',
+                'application/zip'
+            ];
+
+            if (file.size > maxSize) {
+                alert(`El archivo "${file.name}" es demasiado grande. Máximo 100MB.`);
+                return false;
+            }
+
+            if (!allowedTypes.includes(file.type)) {
+                alert(`El tipo de archivo "${file.name}" no está permitido.`);
+                return false;
+            }
+
+            return true;
+        }
+
+        function uploadFile(file) {
+            const fileId = ++fileCounter;
+            const fileData = {
+                id: fileId,
+                name: file.name,
+                size: file.size,
+                type: file.type,
+                description: `Evidencia ${fileId}`,
+                uploadDate: new Date().toISOString(),
+                status: 'uploading'
+            };
+
+            uploadedFiles.push(fileData);
+            addFileToTable(fileData);
+
+            // Simular upload (aquí iría la lógica real de upload)
+            setTimeout(() => {
+                fileData.status = 'completed';
+                updateFileStatus(fileId, 'completed');
+            }, 1000 + Math.random() * 2000);
+        }
+
+        function addFileToTable(fileData) {
+            const row = document.createElement('tr');
+            row.id = `file-row-${fileData.id}`;
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">
+                    ${fileData.name}
+                    <div class="text-xs text-gray-400">${formatFileSize(fileData.size)}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                    <input type="text" value="${fileData.description}" 
+                           class="bg-[#1a202c] border border-gray-500 rounded px-2 py-1 text-sm w-full"
+                           onchange="updateFileDescription(${fileData.id}, this.value)">
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                    <span id="status-${fileData.id}" class="text-yellow-400">
+                        <i class="fas fa-spinner fa-spin"></i> Subiendo...
+                    </span>
+                </td>
+            `;
+            
+            filesTbody.appendChild(row);
+        }
+
+        function updateFileStatus(fileId, status) {
+            const statusElement = document.getElementById(`status-${fileId}`);
+            
+            if (status === 'completed') {
+                statusElement.innerHTML = `
+                    <button class="text-blue-400 hover:text-blue-300 transition duration-200 mx-2" 
+                            title="Ver" onclick="viewFile(${fileId})">
+                        <i class="fas fa-eye fa-lg"></i>
+                    </button>
+                    <button class="text-red-400 hover:text-red-300 transition duration-200 mx-2" 
+                            title="Eliminar" onclick="deleteFile(${fileId})">
+                        <i class="fas fa-trash-alt fa-lg"></i>
+                    </button>
+                `;
+            }
+        }
+
+        function updateFileDescription(fileId, description) {
+            const file = uploadedFiles.find(f => f.id === fileId);
+            if (file) {
+                file.description = description;
+            }
+        }
+
+        function viewFile(fileId) {
+            const file = uploadedFiles.find(f => f.id === fileId);
+            if (file) {
+                alert(`Ver archivo: ${file.name}\nDescripción: ${file.description}`);
+            }
+        }
+
+        function deleteFile(fileId) {
+            if (confirm('¿Está seguro de que desea eliminar este archivo?')) {
+                // Eliminar del array
+                uploadedFiles = uploadedFiles.filter(f => f.id !== fileId);
+                
+                // Eliminar de la tabla
+                const row = document.getElementById(`file-row-${fileId}`);
+                if (row) {
+                    row.remove();
+                }
+                
+                // Actualizar contador
+                updateFileCount();
+            }
+        }
+
+        function updateFileCount() {
+            if (uploadedFiles.length === 0) {
+                fileCount.textContent = 'Ningún archivo seleccionado';
+            } else {
+                fileCount.textContent = `${uploadedFiles.length} archivo(s) cargado(s)`;
+            }
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Gestionar archivos
+        manageFilesBtn.addEventListener('click', () => {
+            alert('Funcionalidad de gestión de archivos y versiones');
+        });
+
+        // Inicializar
+        updateFileCount();
+    </script>
+
+</body>
+</html>

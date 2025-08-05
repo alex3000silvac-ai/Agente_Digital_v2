@@ -1,0 +1,116 @@
+===============================================================================
+INSTRUCCIONES PARA DEPURAR EN EL NAVEGADOR
+===============================================================================
+
+1. ABRIR LA PÁGINA DEL INCIDENTE
+   - URL: http://localhost:8080/incidente/5
+   - Abrir consola del navegador (F12)
+
+2. VERIFICAR TOKEN JWT
+   En la consola, ejecutar:
+   
+   console.log('Token actual:', localStorage.getItem('token'))
+   
+   Si no hay token o está expirado, generar uno nuevo:
+   
+   // Token de prueba válido por 24 horas
+   localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibm9tYnJlIjoiQWRtaW5pc3RyYWRvciIsInJvbCI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3NjA5ODg2NjV9.YOUR_SIGNATURE_HERE')
+
+3. PROBAR CONEXIÓN DIRECTA AL BACKEND
+   En la consola, ejecutar:
+   
+   fetch('http://localhost:5000/api/admin/incidentes/5', {
+     headers: {
+       'Authorization': 'Bearer ' + localStorage.getItem('token')
+     }
+   })
+   .then(response => {
+     console.log('Status:', response.status)
+     return response.json()
+   })
+   .then(data => {
+     console.log('=== DATOS RECIBIDOS ===')
+     console.log('Incidente ID:', data.IncidenteID)
+     console.log('Título:', data.Titulo)
+     
+     // Verificar archivos
+     if (data.archivos) {
+       console.log('\nARCHIVOS:')
+       Object.entries(data.archivos).forEach(([seccion, archivos]) => {
+         if (Array.isArray(archivos) && archivos.length > 0) {
+           console.log(`  ${seccion}: ${archivos.length} archivos`)
+           archivos.forEach(a => console.log(`    - ${a.nombre}`))
+         }
+       })
+     }
+     
+     // Verificar taxonomías
+     if (data.taxonomias_seleccionadas) {
+       console.log('\nTAXONOMÍAS:', data.taxonomias_seleccionadas.length)
+       data.taxonomias_seleccionadas.forEach(t => 
+         console.log(`  - ${t.id}: ${t.justificacion?.substring(0, 50)}...`)
+       )
+     }
+     
+     // Guardar en variable global para inspección
+     window.debugData = data
+     console.log('\n✅ Datos guardados en window.debugData')
+   })
+   .catch(error => {
+     console.error('❌ ERROR:', error)
+   })
+
+4. SI LA LLAMADA FUNCIONA PERO NO SE VEN DATOS EN LA PÁGINA:
+   
+   a) Verificar el componente Vue:
+   
+   const comp = document.querySelector('.acordeon-incidente-mejorado').__vueParentComponent
+   console.log('Modo:', comp.props.modo)
+   console.log('IncidenteId:', comp.props.incidenteId)
+   console.log('Archivos Sección 2:', comp.ctx.archivosSeccion2)
+   console.log('Taxonomías:', comp.ctx.taxonomiasSeleccionadas)
+   
+   b) Forzar recarga de datos:
+   
+   comp.ctx.cargarIncidenteExistente()
+
+5. VERIFICAR LOGS EN LA CONSOLA:
+   Buscar estos mensajes:
+   - "🚀 Acordeón montado con props:"
+   - "📥 Modo edición: cargando datos completos del servidor..."
+   - "⚠️ No hay formData, mapeando campos directamente"
+   - "✅ Archivos restaurados:"
+
+6. SI NO HAY LOGS DE CARGA:
+   El componente no está detectando el modo 'editar'. Verificar:
+   
+   // Ver todas las props
+   const vista = document.querySelector('#app').__vue__
+   console.log('Props del componente:', vista.$children[0].$children)
+
+7. VERIFICAR EN NETWORK TAB:
+   - Buscar petición a: /api/admin/incidentes/5
+   - Verificar Headers → Authorization tiene el token
+   - Verificar Response tiene los datos
+
+===============================================================================
+SOLUCIONES RÁPIDAS:
+===============================================================================
+
+A) Si el token está expirado:
+   - Cerrar sesión y volver a iniciar sesión
+   - O generar un token nuevo con el script
+
+B) Si no se cargan los datos:
+   - Recargar la página con Ctrl+F5
+   - Verificar que la URL sea /incidente/5 (no /incidentes/5)
+
+C) Si aparece error 401:
+   - El token es inválido o la clave secreta no coincide
+   - Revisar config.py del servidor
+
+D) Si aparece error CORS:
+   - Verificar que Flask-CORS esté configurado
+   - Agregar el origen http://localhost:8080
+
+===============================================================================

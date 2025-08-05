@@ -1,0 +1,43 @@
+# BACKUP - acompanamiento.py
+# Fecha: 2025-07-11
+# Contenido: Estructura original del plan con fases genéricas
+
+        plan = {
+            "empresa_id": empresa_id,
+            "razon_social": empresa_info.RazonSocial,
+            "tipo_empresa": empresa_info.TipoEmpresa,
+            "fecha_creacion": datetime.now().strftime('%Y-%m-%d'),
+            "estado": "activo",
+            "fases": [
+                {
+                    "numero": 1,
+                    "nombre": "Diagnóstico Inicial",
+                    "descripcion": "Evaluación del estado actual de cumplimiento",
+                    "duracion_estimada": "2 semanas",
+                    "estado": "pendiente"
+                },
+                {
+                    "numero": 2,
+                    "nombre": "Plan de Implementación",
+                    "descripcion": "Desarrollo del plan de acción personalizado",
+                    "duracion_estimada": "1 semana",
+                    "estado": "pendiente"
+                },
+                {
+                    "numero": 3,
+                    "nombre": "Implementación",
+                    "descripcion": "Ejecución de las medidas de cumplimiento",
+                    "duracion_estimada": "8 semanas",
+                    "estado": "pendiente"
+                },
+                {
+                    "numero": 4,
+                    "nombre": "Seguimiento y Monitoreo",
+                    "descripcion": "Monitoreo continuo del cumplimiento",
+                    "duracion_estimada": "Continuo",
+                    "estado": "pendiente"
+                }
+            ],
+            "proximas_acciones": [],
+            "documentos_requeridos": []
+        }

@@ -1,0 +1,74 @@
+🔧 DEBUG: TEST_MODE value = 'false'
+🔧 DEBUG: TEST_MODE boolean = False
+🏢 FORZANDO uso de SQL Server - REGLA GENERAL
+Modo produccion - usando SQL Server
+🔧 DEBUG CONFIGURACIÓN:
+   SERVER: 192.168.100.125
+   DATABASE: AgenteDigitalDB
+   USERNAME: app_usuario
+   PASSWORD: ***
+🔧 DEBUG: Intento 1/3 - Conectando a 192.168.100.125:AgenteDigitalDB
+🔧 DEBUG: Usuario: app_usuario
+🔧 DEBUG: Drivers disponibles: ['ODBC Driver 17 for SQL Server']
+✅ DEBUG: Usando driver: ODBC Driver 17 for SQL Server
+🔧 DEBUG: Usando SQL Server Authentication
+🔧 DEBUG: String de conexión: DRIVER={ODBC Driver 17 for SQL Server};SERVER=192.168.100.125;DATABASE=AgenteDigitalDB;UID=app_usuario;PWD=***;Encrypt=no;TrustServerCertificate=yes;Connection Timeout=30;Command Timeout=60;LoginTimeout=30;MultipleActiveResultSets=true;Pooling=true;
+✅ DEBUG: Conexión exitosa y test de conectividad OK!
+LISTADO DE TABLAS EN BASE DE DATOS:
+==================================================
+  1. AdministradoresPlataforma
+  2. ANCI_SECCIONES_CONFIG
+  3. AnciAutorizaciones
+  4. AnciEnvios
+  5. AnciNotificaciones
+  6. AnciPlantillas
+  7. AnciPlazos
+  8. AnciValidaciones
+  9. AuditoriaAccesos
+ 10. AuditoriaAdminPlataforma
+ 11. BACKUP_UsuariosCliente_20250713
+ 12. BACKUP_UsuariosPlataforma_20250713
+ 13. COMENTARIOS_TAXONOMIA
+ 14. ComentariosIncidenteCategoria
+ 15. ConfiguracionSeguridad
+ 16. CumplimientoEmpresa
+ 17. Empresas
+ 18. EVIDENCIAS_TAXONOMIA
+ 19. EvidenciasCumplimiento
+ 20. EvidenciasIncidenteCategoria
+ 21. EvidenciasIncidentes
+ 22. HistorialCumplimiento
+ 23. HistorialIncidentes
+ 24. INCIDENTE_TAXONOMIA
+ 25. Incidentes
+ 26. INCIDENTES_ARCHIVOS
+ 27. INCIDENTES_AUDITORIA
+ 28. INCIDENTES_COMENTARIOS
+ 29. INCIDENTES_SECCIONES_DATOS
+ 30. IncidentesCategorias
+ 31. Inquilinos
+ 32. InquilinosConfig
+ 33. LogsAuditoria
+ 34. OBLIGACIONES
+ 35. PerfilesAdminPlataforma
+ 36. Recomendaciones
+ 37. RecomendacionesCumplimiento
+ 38. ReportesANCI
+ 39. RolesCliente
+ 40. RolesPlataforma
+ 41. SesionesActivas
+ 42. SesionesAdminPlataforma
+ 43. SolicitudesAutorizacion
+ 44. SolucionesGenericas
+ 45. SolucionesPropuestas
+ 46. Taxonomia_Areas
+ 47. Taxonomia_Categoria
+ 48. Taxonomia_Categorias
+ 49. Taxonomia_Efectos
+ 50. Taxonomia_incidentes
+ 51. Usuarios
+ 52. UsuariosCliente
+ 53. UsuariosPlataforma
+ 54. VerbosRectores
+
+Total de tablas: 54

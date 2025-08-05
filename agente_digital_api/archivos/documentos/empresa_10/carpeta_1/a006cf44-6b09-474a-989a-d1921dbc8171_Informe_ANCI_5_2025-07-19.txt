@@ -1,0 +1,85 @@
+════════════════════════════════════════════════════════════════════════════════
+INFORME PRELIMINAR - PLATAFORMA ANCI
+NOTIFICACIÓN DE INCIDENTE DE CIBERSEGURIDAD
+════════════════════════════════════════════════════════════════════════════════
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ INFORMACIÓN DEL REPORTE                                               ║
+╚═══════════════════════════════════════════════════════════════════════╝
+📅 Fecha del Reporte: 19/07/2025 16:45
+🔢 ID Incidente: 5_3_1_1_INCIDENTE_NUEVO
+📋 Tipo de Informe: PRELIMINAR
+
+────────────────────────────────────────────────────────────────────────────────
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 1. DATOS DE LA ORGANIZACIÓN AFECTADA                                  ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📌 Razón Social: Sub empresa Surtika spa
+📌 RUT: 11.216.888-5
+📌 Tipo de Entidad: PSE
+📌 Organización: Empresas Surtika SPA
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 2. IDENTIFICACIÓN DEL INCIDENTE                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+🔴 Título del Incidente:
+   Se carga la vista de detalle sin errores
+
+📅 Fecha y Hora de Detección: 18/07/2025 00:19
+📅 Fecha y Hora de Ocurrencia: 17/07/2025 00:19
+
+⚠️  Nivel de Criticidad: Alta
+🎯 Origen del Incidente: Se carga la vista de detalle sin errores
+📊 Estado Actual: Abierto
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 3. DESCRIPCIÓN DETALLADA DEL INCIDENTE                               ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📝 Descripción:
+   Se carga la vista de detalle sin erroresSe carga la vista de detalle
+   sin erroresSe carga la vista de detalle sin erroresSe carga la vista
+   de detalle sin errores
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 4. EVALUACIÓN PRELIMINAR DE IMPACTO                                  ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+💥 Impacto Identificado:
+   Impacto medio-alto con afectaciÃ³n a servicios crÃ­ticos
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 5. MEDIDAS DE CONTENCIÓN Y ACCIONES INMEDIATAS                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+🛡️ Acciones Implementadas:
+   Se carga la vista de detalle sin errores
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ ⚠️  RECORDATORIO - PRÓXIMOS PLAZOS ANCI                               ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📌 Informe COMPLETO: Dentro de 72 horas desde la detección
+📌 Informe FINAL: Dentro de 30 días desde la detección
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║ 📋 CAMPOS PARA COMPLETAR EN PLATAFORMA ANCI                          ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+Los siguientes campos deben ser completados manualmente en la plataforma:
+
+✏️ Tipo de incidente (Taxonomía ANCI)
+✏️ Sistemas o servicios afectados (detalle)
+✏️ Número de usuarios afectados
+✏️ Afectación a terceros (Sí/No)
+✏️ Medidas de seguridad previas
+
+════════════════════════════════════════════════════════════════════════════════
+
+📄 Informe PRELIMINAR generado según Ley 21.663
+🕐 Fecha de generación: 19/07/2025 a las 16:45:32
+🏢 Sistema: AgenteDigital - Gestión de Incidentes ANCI
+
+════════════════════════════════════════════════════════════════════════════════

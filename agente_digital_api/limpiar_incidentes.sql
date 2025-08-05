@@ -1,0 +1,165 @@
+-- ========================================
+-- SCRIPT DE LIMPIEZA TOTAL DE INCIDENTES
+-- ========================================
+-- ADVERTENCIA: Este script eliminará TODOS los incidentes y datos relacionados
+-- No hay forma de deshacer esta operación
+-- ========================================
+
+PRINT '⚠️ INICIANDO LIMPIEZA TOTAL DE INCIDENTES...'
+PRINT '================================================'
+
+-- Deshabilitar temporalmente las restricciones de foreign key
+EXEC sp_MSforeachtable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'
+
+-- 1. ELIMINAR DATOS DEL SISTEMA DINÁMICO (si existe)
+PRINT ''
+PRINT '1️⃣ Eliminando datos del sistema dinámico...'
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_ARCHIVOS')
+BEGIN
+    DELETE FROM INCIDENTES_ARCHIVOS
+    PRINT '   ✅ INCIDENTES_ARCHIVOS limpiada'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_COMENTARIOS')
+BEGIN
+    DELETE FROM INCIDENTES_COMENTARIOS
+    PRINT '   ✅ INCIDENTES_COMENTARIOS limpiada'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_SECCIONES_DATOS')
+BEGIN
+    DELETE FROM INCIDENTES_SECCIONES_DATOS
+    PRINT '   ✅ INCIDENTES_SECCIONES_DATOS limpiada'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_AUDITORIA')
+BEGIN
+    DELETE FROM INCIDENTES_AUDITORIA
+    PRINT '   ✅ INCIDENTES_AUDITORIA limpiada'
+END
+
+-- 2. ELIMINAR DATOS DEL SISTEMA ACTUAL
+PRINT ''
+PRINT '2️⃣ Eliminando datos del sistema actual...'
+
+-- Comentarios de taxonomías
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'COMENTARIOS_TAXONOMIA')
+BEGIN
+    DECLARE @count_comentarios INT = (SELECT COUNT(*) FROM COMENTARIOS_TAXONOMIA)
+    DELETE FROM COMENTARIOS_TAXONOMIA
+    PRINT '   ✅ COMENTARIOS_TAXONOMIA: ' + CAST(@count_comentarios AS VARCHAR) + ' registros eliminados'
+END
+
+-- Evidencias de taxonomías
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EVIDENCIAS_TAXONOMIA')
+BEGIN
+    DECLARE @count_ev_tax INT = (SELECT COUNT(*) FROM EVIDENCIAS_TAXONOMIA)
+    DELETE FROM EVIDENCIAS_TAXONOMIA
+    PRINT '   ✅ EVIDENCIAS_TAXONOMIA: ' + CAST(@count_ev_tax AS VARCHAR) + ' registros eliminados'
+END
+
+-- Relación incidente-taxonomía
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTE_TAXONOMIA')
+BEGIN
+    DECLARE @count_inc_tax INT = (SELECT COUNT(*) FROM INCIDENTE_TAXONOMIA)
+    DELETE FROM INCIDENTE_TAXONOMIA
+    PRINT '   ✅ INCIDENTE_TAXONOMIA: ' + CAST(@count_inc_tax AS VARCHAR) + ' registros eliminados'
+END
+
+-- Evidencias de incidentes
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EvidenciasIncidentes')
+BEGIN
+    DECLARE @count_evidencias INT = (SELECT COUNT(*) FROM EvidenciasIncidentes)
+    DELETE FROM EvidenciasIncidentes
+    PRINT '   ✅ EvidenciasIncidentes: ' + CAST(@count_evidencias AS VARCHAR) + ' registros eliminados'
+END
+
+-- Historial de incidentes
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'HistorialIncidentes')
+BEGIN
+    DECLARE @count_historial INT = (SELECT COUNT(*) FROM HistorialIncidentes)
+    DELETE FROM HistorialIncidentes
+    PRINT '   ✅ HistorialIncidentes: ' + CAST(@count_historial AS VARCHAR) + ' registros eliminados'
+END
+
+-- 3. ELIMINAR INCIDENTES (tabla principal)
+PRINT ''
+PRINT '3️⃣ Eliminando tabla principal de incidentes...'
+
+DECLARE @count_incidentes INT = (SELECT COUNT(*) FROM Incidentes)
+DELETE FROM Incidentes
+PRINT '   ✅ Incidentes: ' + CAST(@count_incidentes AS VARCHAR) + ' registros eliminados'
+
+-- 4. RESETEAR CONTADORES DE IDENTIDAD
+PRINT ''
+PRINT '4️⃣ Reseteando contadores de identidad...'
+
+-- Sistema actual
+DBCC CHECKIDENT ('Incidentes', RESEED, 0)
+PRINT '   ✅ Incidentes reseteado'
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EvidenciasIncidentes')
+BEGIN
+    DBCC CHECKIDENT ('EvidenciasIncidentes', RESEED, 0)
+    PRINT '   ✅ EvidenciasIncidentes reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTE_TAXONOMIA')
+BEGIN
+    DBCC CHECKIDENT ('INCIDENTE_TAXONOMIA', RESEED, 0)
+    PRINT '   ✅ INCIDENTE_TAXONOMIA reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'COMENTARIOS_TAXONOMIA')
+BEGIN
+    DBCC CHECKIDENT ('COMENTARIOS_TAXONOMIA', RESEED, 0)
+    PRINT '   ✅ COMENTARIOS_TAXONOMIA reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'EVIDENCIAS_TAXONOMIA')
+BEGIN
+    DBCC CHECKIDENT ('EVIDENCIAS_TAXONOMIA', RESEED, 0)
+    PRINT '   ✅ EVIDENCIAS_TAXONOMIA reseteado'
+END
+
+-- Sistema dinámico
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_SECCIONES_DATOS')
+BEGIN
+    DBCC CHECKIDENT ('INCIDENTES_SECCIONES_DATOS', RESEED, 0)
+    PRINT '   ✅ INCIDENTES_SECCIONES_DATOS reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_COMENTARIOS')
+BEGIN
+    DBCC CHECKIDENT ('INCIDENTES_COMENTARIOS', RESEED, 0)
+    PRINT '   ✅ INCIDENTES_COMENTARIOS reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_ARCHIVOS')
+BEGIN
+    DBCC CHECKIDENT ('INCIDENTES_ARCHIVOS', RESEED, 0)
+    PRINT '   ✅ INCIDENTES_ARCHIVOS reseteado'
+END
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'INCIDENTES_AUDITORIA')
+BEGIN
+    DBCC CHECKIDENT ('INCIDENTES_AUDITORIA', RESEED, 0)
+    PRINT '   ✅ INCIDENTES_AUDITORIA reseteado'
+END
+
+-- 5. HABILITAR NUEVAMENTE LAS RESTRICCIONES
+EXEC sp_MSforeachtable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL'
+
+-- 6. RESUMEN FINAL
+PRINT ''
+PRINT '================================================'
+PRINT '✅ LIMPIEZA COMPLETADA'
+PRINT '================================================'
+PRINT 'NOTA: Los archivos físicos deben eliminarse manualmente'
+PRINT 'o ejecutando el script Python: limpiar_todo_incidentes.py'
+PRINT ''
+PRINT 'Para eliminar las carpetas de archivos:'
+PRINT '1. Eliminar carpeta: C:\archivos\empresa_*'
+PRINT '2. Eliminar carpeta: /archivos/empresa_*'
+PRINT '================================================'

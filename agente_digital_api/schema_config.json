@@ -1,0 +1,29 @@
+{
+    "taxonomia": {
+        "areas": {
+            "tabla": "TaxonomiaAreas",
+            "columna_id": "AreaID",
+            "columna_nombre": "NombreArea"
+        },
+        "efectos": {
+            "tabla": "TaxonomiaEfectos",
+            "columna_id": "EfectoID",
+            "columna_nombre": "NombreEfecto"
+        },
+        "categorias": {
+            "tabla": "TaxonomiaCategorias",
+            "columna_id": "CategoriaID",
+            "columna_nombre": "AplicaPara"
+        }
+    },
+    "obligaciones": {
+        "tabla": "Obligaciones",
+        "columna_id": "ObligacionID",
+        "columna_articulo": "ArticuloNorma",
+        "columna_descripcion": "Descripcion",
+        "columna_origen": "Origen",
+        "columna_aplica": "AplicaPara",
+        "columna_exigencia": "TipoExigencia",
+        "columna_frecuencia": "Frecuencia"
+    }
+}

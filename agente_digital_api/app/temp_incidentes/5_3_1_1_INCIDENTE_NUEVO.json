@@ -1,0 +1,108 @@
+{
+  "inquilino_id": 1,
+  "empresa_id": "3",
+  "titulo_incidente": "Se carga la vista de detalle sin errores",
+  "fecha_deteccion": "2025-07-18T00:19",
+  "fecha_ocurrencia": "2025-07-17T00:19",
+  "criticidad": "Alta",
+  "alcance_geografico": "Pais",
+  "descripcion_detallada": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "impacto_preliminar": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "sistemas_afectados": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "servicios_interrumpidos": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "origen_ataque": "Se carga la vista de detalle sin errores",
+  "tipo_amenaza": "Se carga la vista de detalle sin errores",
+  "responsable_cliente": "Se carga la vista de detalle sin errores",
+  "medidas_contencion": "Se carga la vista de detalle sin errores",
+  "analisis_causa_raiz": "Se carga la vista de detalle sin errores",
+  "lecciones_aprendidas": "Se carga la vista de detalle sin errores",
+  "recomendaciones_mejora": "Se carga la vista de detalle sin errores",
+  "usuario_id": 1,
+  "taxonomias": [
+    {
+      "id": "INC_USO_PHIP_ECDP",
+      "nombre": "Envío de correo no deseado o phishing desde infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "area": "Impacto en el uso legítimo de recursos",
+      "efecto": "Actividades de phishing o fraude en infraestructura propia",
+      "categoria": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "subcategoria": "Actividades de phishing o fraude en infraestructura propia",
+      "descripcion": "Impacto en el uso legítimo de recursos - Actividades de phishing o fraude en infraestructura propia - Actividades de phishing o fraude en infraestructura propia",
+      "tipo": "AMBAS",
+      "justificacion": "Se carga la vista de detalle sin errores",
+      "descripcionProblema": "Se carga la vista de detalle sin errores",
+      "archivos": [
+        {
+          "id": 1752812454460.4539,
+          "nombre": "Tablas_maestras_29062025_1720.xlsx",
+          "tamaño": 17690,
+          "tipo": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "archivo": {},
+          "fechaCarga": "2025-07-18T04:20:54.461Z"
+        }
+      ],
+      "guardada": true,
+      "fechaGuardado": "2025-07-18T04:20:57.943Z"
+    }
+  ],
+  "archivos": {
+    "seccion_2": [
+      {
+        "nombre": "mejoras.txt",
+        "tamaño": 5020,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T04:20:27.674Z",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "file": {},
+        "seccion": 2,
+        "campo": 5,
+        "id": "2.5.1752812427674"
+      }
+    ],
+    "seccion_3": [
+      {
+        "nombre": "formato_base.txt",
+        "tamaño": 46722,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T04:20:38.148Z",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "file": {},
+        "seccion": 3,
+        "campo": 4,
+        "id": "3.4.1752812438149"
+      }
+    ],
+    "seccion_5": [
+      {
+        "nombre": "mejoras.txt",
+        "tamaño": 5020,
+        "tipo": "text/plain",
+        "fechaCarga": "2025-07-18T04:21:13.834Z",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "file": {},
+        "seccion": 5,
+        "campo": 2,
+        "id": "5.2.1752812473834"
+      }
+    ],
+    "seccion_6": [
+      {
+        "nombre": "ejemplo.docx",
+        "tamaño": 122320,
+        "tipo": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "fechaCarga": "2025-07-18T04:21:25.599Z",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "file": {},
+        "seccion": 6,
+        "campo": 4,
+        "id": "6.4.1752812485599"
+      }
+    ]
+  },
+  "timestamp_creacion": "2025-07-18T00:21:52.383561",
+  "estado_temporal": "semilla_original",
+  "indice_unico": "5_3_1_1_INCIDENTE_NUEVO"
+}

@@ -1,0 +1,112 @@
+{
+  "archivos": {
+    "seccion_2": [
+      {
+        "id": 7,
+        "nombre": "analisis_inicial.pdf",
+        "tipo": "application/pdf",
+        "tamaño": 262144,
+        "fechaCarga": "2025-07-18 14:17:26.767000",
+        "subidoPor": "sistema_prueba",
+        "descripcion": "Análisis inicial del incidente con detalles técnicos",
+        "comentario": "",
+        "existente": true,
+        "origen": "guardado"
+      },
+      {
+        "id": 8,
+        "nombre": "logs_sistema.txt",
+        "tipo": "text/plain",
+        "tamaño": 46080,
+        "fechaCarga": "2025-07-18 14:17:26.790000",
+        "subidoPor": "sistema_prueba",
+        "descripcion": "Logs del sistema durante el incidente",
+        "comentario": "",
+        "existente": true,
+        "origen": "guardado"
+      }
+    ],
+    "seccion_3": [
+      {
+        "id": 9,
+        "nombre": "diagrama_red_afectada.png",
+        "tipo": "image/png",
+        "tamaño": 193536,
+        "fechaCarga": "2025-07-18 14:17:26.820000",
+        "subidoPor": "sistema_prueba",
+        "descripcion": "Diagrama de la red comprometida",
+        "comentario": "",
+        "existente": true,
+        "origen": "guardado"
+      }
+    ],
+    "seccion_5": [
+      {
+        "id": 12,
+        "nombre": "checklist_respuesta.pdf",
+        "tipo": "application/pdf",
+        "tamaño": 23552,
+        "fechaCarga": "2025-07-18 14:17:26.927000",
+        "subidoPor": "sistema_prueba",
+        "descripcion": "Checklist de respuesta ante incidentes",
+        "comentario": "",
+        "existente": true,
+        "origen": "guardado"
+      }
+    ],
+    "seccion_6": [
+      {
+        "id": 13,
+        "nombre": "informe_lecciones.pdf",
+        "tipo": "application/pdf",
+        "tamaño": 159744,
+        "fechaCarga": "2025-07-18 14:17:26.953000",
+        "subidoPor": "sistema_prueba",
+        "descripcion": "Informe completo de lecciones aprendidas",
+        "comentario": "",
+        "existente": true,
+        "origen": "guardado"
+      }
+    ],
+    "taxonomias": {}
+  },
+  "taxonomias_seleccionadas": [
+    {
+      "id": "INC_CONF_EXCF_FCRA",
+      "nombre": "INC_CONF_EXCF_FCRA",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de configuraciones",
+      "categoria": "Filtración de configuraciones en rutas de aplicación",
+      "subcategoria": "Exfiltración y/o exposición de configuraciones",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de configuraciones en el área de Impacto en la confidencialidad de la información. Exposición de ficheros de configuración a través de rutas accesibles.",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18 14:15:35.466666",
+      "archivos": []
+    },
+    {
+      "id": "INC_CONF_EXCF_FSRA",
+      "nombre": "INC_CONF_EXCF_FSRA",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de configuraciones",
+      "categoria": "Filtración de secretos en rutas de aplicación",
+      "subcategoria": "Exfiltración y/o exposición de configuraciones",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de configuraciones en el área de Impacto en la confidencialidad de la información. Exposición de credenciales, tokens o contraseñas en rutas accesibles de una aplicación.",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18 14:15:35.473333",
+      "archivos": []
+    },
+    {
+      "id": "INC_CONF_EXCS_ACVE",
+      "nombre": "INC_CONF_EXCS_ACVE",
+      "area": "Impacto en la confidencialidad de la información",
+      "efecto": "Exfiltración y/o exposición de código fuente",
+      "categoria": "Archivo(s) de control de versión expuestos en aplicación",
+      "subcategoria": "Exfiltración y/o exposición de código fuente",
+      "justificacion": "Esta taxonomía aplica porque se identificó Exfiltración y/o exposición de código fuente en el área de Impacto en la confidencialidad de la información. Exposición de directorios o archivos de sistemas de control de versiones (ej: .git).",
+      "descripcionProblema": "",
+      "fechaSeleccion": "2025-07-18 14:15:35.480000",
+      "archivos": []
+    }
+  ],
+  "formData": {}
+}

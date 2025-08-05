@@ -1,0 +1,105 @@
+{
+  "IncidenteID": 5,
+  "EmpresaID": 3,
+  "Titulo": "Se carga la vista de detalle sin errores",
+  "IDVisible": "5_3_1_1_INCIDENTE_NUEVO",
+  "FechaCreacion": "2025-07-18 00:21:52.440000",
+  "FechaDeteccion": "2025-07-18 00:19:00",
+  "FechaCierre": null,
+  "CreadoPor": "1",
+  "ResponsableCliente": "Se carga la vista de detalle sin errores",
+  "EstadoActual": "Abierto",
+  "Criticidad": "Alta",
+  "TipoFlujo": null,
+  "DescripcionInicial": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "SistemasAfectados": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "OrigenIncidente": "Se carga la vista de detalle sin errores",
+  "AccionesInmediatas": "Se carga la vista de detalle sin errores",
+  "ReporteAnciID": null,
+  "FechaDeclaracionANCI": null,
+  "FechaActualizacion": null,
+  "FechaOcurrencia": "2025-07-17 00:19:00",
+  "AlcanceGeografico": "Pais",
+  "ServiciosInterrumpidos": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "AnciImpactoPreliminar": "Se carga la vista de detalle sin erroresSe carga la vista de detalle sin erroresSe carga la vista de detalle sin errores",
+  "AnciTipoAmenaza": "Se carga la vista de detalle sin errores",
+  "CausaRaiz": "Se carga la vista de detalle sin errores",
+  "LeccionesAprendidas": "Se carga la vista de detalle sin errores",
+  "PlanMejora": "Se carga la vista de detalle sin errores",
+  "FormatoSemillaJSON": null,
+  "FechaModificacion": null,
+  "IndiceTaxonomias": null,
+  "NombreEmpresa": "Sub empresa Surtika spa",
+  "TipoEmpresa": "PSE",
+  "RutEmpresa": "11.216.888-5",
+  "taxonomias": [
+    {
+      "id": "INC_USO_PHIP_ECDP",
+      "comentarios": "Justificación: Se carga la vista de detalle sin errores\nDescripción del problema: Se carga la vista de detalle sin errores",
+      "fecha_asignacion": "2025-07-18T00:21:52.463333",
+      "nombre": "Actividades de phishing o fraude en infraestructura propia",
+      "descripcion": "Uso de los servidores de la institucin para generar correos fraudulentos o spam.",
+      "justificacion": "Se carga la vista de detalle sin errores",
+      "descripcionProblema": "Se carga la vista de detalle sin errores",
+      "archivos": []
+    }
+  ],
+  "archivos": {
+    "2": [
+      {
+        "id": "5_2_1",
+        "nombre": "mejoras.txt",
+        "tamaño": 5020,
+        "tipo": "text/plain",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "fechaCarga": "2025-07-18T04:20:27.674Z",
+        "origen": "guardado",
+        "existente": true,
+        "ruta": ""
+      }
+    ],
+    "3": [
+      {
+        "id": "5_3_1",
+        "nombre": "formato_base.txt",
+        "tamaño": 46722,
+        "tipo": "text/plain",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "fechaCarga": "2025-07-18T04:20:38.148Z",
+        "origen": "guardado",
+        "existente": true,
+        "ruta": ""
+      }
+    ],
+    "5": [
+      {
+        "id": "5_5_1",
+        "nombre": "mejoras.txt",
+        "tamaño": 5020,
+        "tipo": "text/plain",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "fechaCarga": "2025-07-18T04:21:13.834Z",
+        "origen": "guardado",
+        "existente": true,
+        "ruta": ""
+      }
+    ],
+    "6": [
+      {
+        "id": "5_6_1",
+        "nombre": "ejemplo.docx",
+        "tamaño": 122320,
+        "tipo": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "descripcion": "Se carga la vista de detalle sin errores",
+        "comentario": "Se carga la vista de detalle sin errores",
+        "fechaCarga": "2025-07-18T04:21:25.599Z",
+        "origen": "guardado",
+        "existente": true,
+        "ruta": ""
+      }
+    ]
+  }
+}

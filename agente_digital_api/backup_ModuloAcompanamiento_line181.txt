@@ -1,0 +1,4 @@
+// BACKUP - ModuloAcompanamiento.vue línea 181
+// Fecha: 2025-07-11
+// Original:
+        planAcompanamiento.value = response.data.map(item => ({ ...item, guardando: false }));

@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "taxonomias_seleccionadas": [
+    {
+      "Id_Taxonomia": "INC_USO_PHIP_ECDP",
+      "Comentarios": "Justificación: asdfsadf sdf sadf s sdf sadf sdf\nDescripción del problema: dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+      "FechaAsignacion": "2025-07-19 22:40:45.620000",
+      "CreadoPor": "Sistema",
+      "Area": "Impacto en el uso legítimo de recursos",
+      "Efecto": "Actividades de phishing o fraude en infraestructura propia",
+      "Categoria_del_Incidente": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "Subcategoria_del_Incidente": "Actividades de phishing o fraude en infraestructura propia",
+      "AplicaTipoEmpresa": "AMBAS",
+      "justificacion": "asdfsadf sdf sadf s sdf sadf sdf",
+      "descripcionProblema": "dfsffffffffffffffffffffffffffffffffffffffffffffffff ffffffffffffff22222",
+      "id": "INC_USO_PHIP_ECDP",
+      "nombre": "Envío de correo no deseado o phishing desde infraestructura propia",
+      "area": "Impacto en el uso legítimo de recursos",
+      "efecto": "Actividades de phishing o fraude en infraestructura propia"
+    }
+  ]
+}
